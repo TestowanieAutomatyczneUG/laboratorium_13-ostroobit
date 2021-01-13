@@ -1,17 +1,17 @@
 Feature: Comparing words
     We are comparing words or checking if first includes second
 
+    @words
     Scenario: User types in siemanko and siemanko
-
         Given two words
         """
         siemanko,siemanko
         """
         When they are the same
         Then returns True
-
+        
+    @words
     Scenario: User types in siemanko and siema
-
         Given two words
         """
         siemanko,siema
@@ -19,8 +19,8 @@ Feature: Comparing words
         When first includes second
         Then returns True
 
+    @words
     Scenario: User types in siema and siemanko
-
         Given two words
         """
         siema,siemanko
@@ -28,6 +28,7 @@ Feature: Comparing words
         When second includes first
         Then returns False
 
+    @words
     Scenario: User types two totally different words
         Given two words
         """
@@ -36,6 +37,7 @@ Feature: Comparing words
         When they are different
         Then returns False
 
+    @words
     Scenario: User types only one word
 
         Given one word
@@ -44,6 +46,7 @@ Feature: Comparing words
         """        
         Then you have to type two words
 
+    @words
     Scenario: User types in witam and witam
 
         Given two words
@@ -53,10 +56,12 @@ Feature: Comparing words
         When they are the same
         Then returns True
 
+    @words
     Scenario: User types zero words
         Given zero words
         Then you have to type two words
 
+    @words
     Scenario: User types in elopomelo and elo
         Given two words
         """
